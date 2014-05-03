@@ -13,7 +13,14 @@ def addQuote():
         else:
             quote += " hodor"
         quoteCount += 1
-    quote += ".\""
+    tmp3 = random.randint(0, 100)
+    if tmp3 <= 10:
+        quote += "?\""
+    elif tmp3 <= 20:
+        quote += "!\""
+    else:
+        quote += ".\""
+
     tmp = random.randint(0,2)
     for i in range (0, tmp):
         tmp2 = random.randint(1,2)
@@ -44,7 +51,7 @@ def main():
         sentencesPerParagraph = random.randint(4, 10) #Create random length for paragraph
         sentenceCount = 0
         print ""
-        
+
         while sentenceCount < sentencesPerParagraph: #Generate a sentence while less than number per paragraph
             #Create clean sentence
             wordsPerSentence = random.randint(12, 40) #Create random length for sentence
